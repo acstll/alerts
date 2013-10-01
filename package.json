@@ -1,0 +1,30 @@
+{
+  "name": "alerts",
+  "version": "0.1.0",
+  "description": "Simple and straigtforward notifications for the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acstll/alerts.git"
+  },
+  "keywords": [
+    "alerts",
+    "notifications",
+    "browser"
+  ],
+  "author": "Arturo Castillo Delgado <19@8302.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acstll/alerts/issues"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-amd-wrap": "~1.0.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}

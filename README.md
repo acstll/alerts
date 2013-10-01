@@ -39,7 +39,20 @@ var alert = require('alert');
 alert('Foo');
 ```
 
-Basic CSS you need to get it working.
+Passing in some options.
+
+```js
+var alerted = alert('Some error', {
+  timeout: 4000,
+  className: 'alert-error'
+});
+
+// The HTML element is available at alerted.el
+```
+
+## CSS
+
+This is the least CSS you need to get it working.
 
 ```css
 .alerts {
@@ -58,23 +71,29 @@ Basic CSS you need to get it working.
 }
 ```
 
-Passing in some options.
-
-```js
-var alerted = alert('Some error', {
-  timeout: 4000,
-  className: 'alert-error'
-});
-
-// The HTML element is available at alerted.el
-```
-
 ### Transitions
 
 If you want to use CSS transitions to either fade alerts in and out or swap them from right to left and viceversa, you can. Just set the `alert.transitionTime` property to the transition duration in miliseconds.
 
 ```js
-alert.transitionTime = 400;
+alert.transitionTime = 200;
+```
+
+And then get creative with your CSS.
+
+```css
+.alerts > div {
+	transition: opacity .2s;
+}
+
+.alerts > .alert,
+.alerts > .alert-dismiss {
+	opacity: 0;
+}
+
+.alerts > .alert-show {
+	opacity: 1;
+}
 ```
 
 ### And more
@@ -91,11 +110,11 @@ alert.container.style.backgroundColor = 'lime';
 
 ## Browser support
 
-It should work everywhere. Need to write tests.
+It should work everywhere. I still need to write tests.
 
 ## TODO
 
-- Tests
+- Write tests
 - Demo
 
 ## License

@@ -10,12 +10,6 @@ Alerts stack up. You dismiss them with a click (and also get them dismissed by t
 npm install alerts
 ```
 
-Or if you feel cooler.
-
-```bash
-bower install alerts
-```
-
 AMD supported.
 
 If used in good old `<script>` tag, it attaches itself to the `window` object as `al`.
@@ -39,15 +33,15 @@ If used in good old `<script>` tag, it attaches itself to the `window` object as
 
 Pretty straightforward.
 
-´´´js
+```js
 var alert = require('alert');
 
 alert('Foo');
-´´´
+```
 
 Basic CSS you need to get it working.
 
-´´´css
+```css
 .alerts {
 	position: fixed;
 	z-index: 10000;
@@ -62,38 +56,38 @@ Basic CSS you need to get it working.
 	background-color: rgba(200, 200, 200, 0.8);
 	cursor: default;
 }
-´´´
+```
 
 Passing in some options.
 
-´´´js
+```js
 var alerted = alert('Some error', {
   timeout: 4000,
   className: 'alert-error'
 });
 
 // The HTML element is available at alerted.el
-´´´
+```
 
 ### Transitions
 
 If you want to use CSS transitions to either fade alerts in and out or swap them from right to left and viceversa, you can. Just set the `alert.transitionTime` property to the transition duration in miliseconds.
 
-´´´js
+```js
 alert.transitionTime = 400;
-´´´
+```
 
 ### And more
 
 You also have the `Alert` constructor plus the `container` element at your disposal.
 
-´´´js
+```js
 // The constructor
 var alerted = new alert.Alert('Foo');
 
 // The element
 alert.container.style.backgroundColor = 'lime';
-´´´
+```
 
 ## Browser support
 

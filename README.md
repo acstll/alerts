@@ -2,9 +2,15 @@
 
 Simple and **straigtforward** notifications for the browser.
 
-Alerts stack up. You dismiss them with a click (and also get them dismissed by themselves after some time by setting the `timeout` option). 
+Alerts stack up. You dismiss them with a click (and also get them dismissed by themselves after some time by setting the `timeout` option).
+
+![screenshot](screenshot.png)
+
+[![testling badge](https://ci.testling.com/acstll/alerts.png)](https://ci.testling.com/acstll/alerts)
 
 ## Install
+
+Use with browserify, gluejs, etc.
 
 ```bash
 npm install alerts
@@ -27,7 +33,7 @@ If used in good old `<script>` tag, it attaches itself to the `window` object as
 - timeout `Number` Time in miliseconds after which the alert is dismissed
 - className `String` Custom class name to be added to each alert element
 - onshow `Function` To be called when alert gets shown, with the alert element as context plus the options object as first argument, so anything you pass in is there
-- ondismiss `Function` To be called after alert gets dismissed, with Alert instance (not the object, remember the element is about to be removed from the DOM) as context and options object as first argument
+- ondismiss `Function` To be called just before the alert gets dismissed, with the Alert instance (the element is about to be removed from the DOM) as context and options object as first argument
 
 ## Usage
 
@@ -107,15 +113,6 @@ var alerted = new alert.Alert('Foo');
 // The element
 alert.container.style.backgroundColor = 'lime';
 ```
-
-## Browser support
-
-It should work everywhere. I still need to write tests.
-
-## TODO
-
-- Write tests
-- Demo
 
 ## License
 

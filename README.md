@@ -2,11 +2,11 @@
 
 Simple and **straigtforward** notifications for the browser.
 
-Alerts stack up. You dismiss them with a click (and also get them dismissed by themselves after some time by setting the `timeout` option).
+Alerts stack up. You dismiss them with a click (and also get them dismissed by themselves after some time by setting the `timeout` option). 
+
+Source is only 2 KB. No dependencies.
 
 ![screenshot](screenshot.png)
-
-[![testling badge](https://ci.testling.com/acstll/alerts.png)](https://ci.testling.com/acstll/alerts)
 
 ## Install
 
@@ -113,6 +113,12 @@ var alerted = new alert.Alert('Foo');
 // The element
 alert.container.style.backgroundColor = 'lime';
 ```
+
+## Browser support
+
+This code should work everywhere.
+
+[![testling badge](https://ci.testling.com/acstll/alerts.png)](https://ci.testling.com/acstll/alerts)
 
 ## License
 

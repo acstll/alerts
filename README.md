@@ -58,7 +58,16 @@ var alerted = alert('Some error', {
 
 ## CSS
 
-This is the least CSS you need to get it working.
+This is the least CSS you need to get it working. (Set `z-index` to something reasonable according to the rest of your stylesheet.)
+
+```css
+.alerts {
+	position: fixed;
+	z-index: 10000;
+}
+```
+
+And this is a copy/paste example more like in the screenshot above.
 
 ```css
 .alerts {

@@ -14,8 +14,8 @@ alert.dismissClassName = 'alert-dismiss';
 alert.Alert = Alert;
 alert.container = container;
 
-if (typeof exports === 'object') exports = alert;
-else window.al = alert;
+try { module.exports = alert; }
+catch (err) { window.al = alert; }
 
 
 

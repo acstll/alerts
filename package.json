@@ -27,7 +27,8 @@
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-clean": "~0.5.0",
     "tape": "~1.1.1",
-    "beefy": "~0.4.4"
+    "beefy": "~0.4.4",
+    "dom-events": "~0.1.1"
   },
   "testling": {
     "files": "test.js",

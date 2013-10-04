@@ -1,4 +1,5 @@
 var alert = require('./');
+var events = require('dom-events');
 var test = require('tape');
 
 alert.transitionTime = 200;
@@ -36,8 +37,8 @@ test('alert', function (t) {
   }
 });
 
-test('stack, className, timeout and callbacks', function (t) {
-  t.plan(5);
+test('stack, click, className, timeout and callbacks', function (t) {
+  t.plan(6);
 
   var container = document.body.children[1];
 
@@ -56,6 +57,11 @@ test('stack, className, timeout and callbacks', function (t) {
 
     t.equal(container.children.length, 4, 'alerts stack');
     t.equal(alerted.el.className, 'alert baz', 'custom className');
+
+    events.emit(alerted.el, 'click');
+    setTimeout(function() {
+      t.equal(container.children.length, 3, 'dismissed on click');
+    }, 250);
   }
 
   function onshow () {
@@ -66,7 +72,8 @@ test('stack, className, timeout and callbacks', function (t) {
     t.pass('ondismiss callback called');
     
     setTimeout(function () {
-      t.equal(container.children.length, 3, 'alert dismissed after timeout');
+      t.equal(container.children.length, 2, 'alert dismissed after timeout');
+      alert('done');
     }, 250);
   }
 });

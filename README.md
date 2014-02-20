@@ -6,7 +6,7 @@ Alerts stack up. You dismiss them with a click (and also get them dismissed by t
 
 Source is only 2 KB. No dependencies.
 
-![screenshot](screenshot.png)
+![screenshot](http://8302.net/images/alerts-screenshot.png)
 
 ## Install
 

@@ -1,5 +1,5 @@
 // alerts.js
-// version: 0.1.2  
+// version: 0.1.3  
 // author: Arturo Castillo Delgado  
 // license: MIT  
 // https://github.com/acstll/alerts
